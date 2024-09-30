@@ -1,7 +1,7 @@
 package com.example.a123;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvChangeText;
     Button btnChangeText;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         });
         this.tvChangeText = findViewById(R.id.tvChangeText);
         this.btnChangeText = findViewById(R.id.btnChangeText);
-        this.btnChangeText.setOnClickListener(view -> tvChangeText.setText("This is the after Result"));
-        }
-
+        this.btnChangeText.setOnClickListener(view -> tvChangeText.setText("Result!"));
     }
+}
