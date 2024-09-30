@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.graphics.Color;
 
 
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvChangeText;
     Button btnChangeText;
+    TextView tvChangeColor;
+    Button btnChangeColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
         this.tvChangeText = findViewById(R.id.tvChangeText);
         this.btnChangeText = findViewById(R.id.btnChangeText);
         this.btnChangeText.setOnClickListener(view -> tvChangeText.setText("Result"));
-        }
 
-    }
+
+        TextView textView = findViewById(R.id.tvChangeText);
+        Button button = findViewById(R.id.btnChangeColor);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Change the color of the TextVew text
+                textView.setTextColor(Color.RED); // Change to red
+
+
+            }
+        });
+    }}
